@@ -6,26 +6,37 @@ public class Ejercicio6 {
 
 	public static void main(String[] args) {
 	
+		// Abrimos el scanner
 		Scanner sc = new Scanner(System.in);
 		
+		// Variable donde guardaremos el valor de "a"
 		int a;
 		
+		// Variable donde guardaremos el valor de "b"
 		int b;
 		
+		// Variable donde guardaremos el valor de "c"
 		int c;
 		
-		double x1;
+		// Variable donde guardaremos el primer resultado de la ecuación
+		int x1;
 		
-		double x2;
+		// Variable donde guardaremos el segundo resultado de la ecuación
+		int x2;
 		
-		System.out.println("Le pedimos al usuario los valores de 'a', 'b' y 'c' para resolver una ecuación de 2º grado");
+		// Le pedimos al usuario los valores de 'a', 'b' y 'c' para resolver una ecuación de 2º grado
+		System.out.println("Dime los valores de  'a', 'b' y 'c' para resolver una ecuación de 2º grado");
 		a = sc.nextInt();
 		b = sc.nextInt();
 		c = sc.nextInt();
 		
-		x1 = (((-b) + Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a));
-		x2 = (((-b) - Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a));
+		// Sacamos el primer resultado de la ecuación
+		x1 = (int) (((-b) + Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a));
 		
+		// Sacamos la segunda respuesta de la ecuación
+		x2 = (int) (((-b) - Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a));
+		
+		// Comprobamos si las soluciones de la ecuación existen o no y cuanto valdría en caso de existir
 		System.out.println(x1);
 		if (x1 > 0) {
 			System.out.println("'x1' valdría: " + x1);
@@ -43,6 +54,7 @@ public class Ejercicio6 {
 			}
 		}
 		
+		// Cerramos el scanner
 		sc.close();
 
 	}
